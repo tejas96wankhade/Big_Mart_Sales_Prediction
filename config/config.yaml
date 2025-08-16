@@ -1,0 +1,60 @@
+
+# =============================================================================
+# CONFIGURATION FILES
+# =============================================================================
+
+# config/config.yaml
+"""
+# BigMart Sales Prediction Configuration
+
+data:
+  train_path: "data/raw/train.csv"
+  test_path: "data/raw/test.csv"
+  processed_train_path: "data/processed/train_processed.csv"
+  processed_test_path: "data/processed/test_processed.csv"
+
+preprocessing:
+  missing_value_strategy:
+    numerical: "mean"
+    categorical: "mode"
+  
+feature_engineering:
+  create_outlet_age: true
+  create_visibility_features: true
+  create_price_categories: true
+  create_interaction_features: true
+
+feature_selection:
+  method: "selectkbest"
+  k: 15
+  score_func: "f_regression"
+
+modeling:
+  cv_folds: 5
+  random_state: 42
+  optimization_trials: 100
+  
+  models:
+    linear:
+      - LinearRegression
+      - Ridge
+      - Lasso
+      - ElasticNet
+    tree:
+      - DecisionTree
+      - RandomForest
+      - ExtraTrees
+    advanced:
+      - LightGBM
+      - XGBoost
+      - CatBoost
+
+ensemble:
+  method: "averaging"
+  top_n_models: 3
+
+results:
+  output_dir: "results/"
+  model_artifacts_dir: "results/model_artifacts/"
+  submissions_dir: "results/submissions/"
+"""
