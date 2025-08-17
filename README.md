@@ -13,6 +13,18 @@ This project implements a complete ML pipeline for the BigMart Sales Prediction 
 - **Robust Evaluation**: Cross-validation and multiple metrics
 - **Production Ready**: Modular code structure with testing framework
 
+## 📂 Data
+
+The dataset required for training and testing is already included in this repository under the `Data/raw/` directory:
+
+- `train.csv`
+- `test.csv`
+- `sample_submission.csv`
+
+This means you can run the notebooks and scripts directly without needing to download additional data.
+
+⚠️ **Note:** If the dataset is updated or replaced, please ensure the files are placed in the same directory structure.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
