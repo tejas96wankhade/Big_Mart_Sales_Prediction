@@ -1,0 +1,22 @@
+BigMart Sales Prediction - Feature Engineering Summary
+============================================================
+
+Original dataset shape: (8523, 13)
+Processed dataset shape: (8523, 20)
+Features added: 7
+
+New Features Created:
+  - Item_MRP_Category
+  - MRP_Weight_Ratio
+  - Weight_Visibility
+  - Outlet_Age
+  - Item_Visibility_Ratio
+  - Item_Visibility_Outlet_Mean
+  - Item_MRP_Visibility
+
+Preprocessing Steps Applied:
+  - Missing value imputation
+  - Category standardization
+  - Zero visibility correction
+  - Feature engineering
+  - Label encoding
