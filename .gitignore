@@ -123,7 +123,7 @@ dmypy.json
 .pyre/
 
 # Project specific
-data/raw/*.csv
+# data/raw/*.csv
 !data/raw/.gitkeep
 data/processed/*.csv
 !data/processed/.gitkeep
