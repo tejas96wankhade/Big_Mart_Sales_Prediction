@@ -303,9 +303,7 @@ class FeatureEngineeringPipeline:
         
         # 3. Item MRP Category
         if 'Item_MRP' in df_eng.columns:
-            df_eng['Item_MRP_Category'] = pd.cut(df_eng['Item_MRP'], 
-                                               bins=[0, 69, 136, 203, 270], 
-                                               labels=[0, 1, 2, 3])
+            df_eng['Item_MRP_Category'] = df_eng['Item_MRP_Category'] = pd.qcut(df_eng['Item_MRP'], q=4, labels=).astype(int)
             # Convert to numeric to avoid issues
             df_eng['Item_MRP_Category'] = df_eng['Item_MRP_Category'].astype(int)
             print(f"   - Created Item_MRP_Category (4 categories based on price ranges)")

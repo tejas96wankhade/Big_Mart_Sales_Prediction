@@ -138,10 +138,7 @@ Item_Visibility_Ratio = Item_Visibility / Outlet_Mean_Visibility
 
 #### 3. Item_MRP_Category
 
-```python
-# Binning MRP into 4 categories based on quartiles
-# Captures non-linear price-sales relationships
-```
+“Binning MRP into 4 categories using pd.qcut to generate quartile-based bins via pd.qcut (equal-frequency).”
 
 #### 4. Interaction Features
 
@@ -254,7 +251,7 @@ Based on F-statistic scores, capturing:
 ### Cross-Validation Strategy
 
 ```python
-# 5-Fold Cross-Validation
+# 5-Fold CV across model evaluation, hyperparameter search, and final model selection
 # Stratified sampling considered but not applicable (regression)
 # Shuffle=True for random data distribution
 ```
@@ -300,7 +297,7 @@ Based on F-statistic scores, capturing:
 ### Objective Function
 
 ```python
-# Minimize 3-fold CV RMSE
+# Minimize 5-fold CV RMSE
 # Faster iteration vs 5-fold
 # Sufficient for hyperparameter tuning
 ```
